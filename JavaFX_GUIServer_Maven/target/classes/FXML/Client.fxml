@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ListView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.VBox?>
+
+<HBox fx:id="clientHorizontalBox" xmlns="http://javafx.com/javafx/19" xmlns:fx="http://javafx.com/fxml/1" fx:controller="clientController">
+   <children>
+      <VBox fx:id="clientBox" alignment="TOP_CENTER" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" spacing="20.0">
+         <children>
+            <TextField fx:id="c1" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="30.0" prefWidth="150.0" />
+            <Button fx:id="b1" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" mnemonicParsing="false" onAction="#sendMessage" prefHeight="34.0" prefWidth="75.0" text="Send" />
+            <ListView fx:id="listItems2" disable="false" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="250.0" prefWidth="450.0" />
+         </children>
+         <HBox.margin>
+            <Insets />
+         </HBox.margin>
+      </VBox>
+      <VBox fx:id="clientRightSideBox" prefHeight="300.0" prefWidth="200.0" spacing="10.0">
+         <children>
+            <ListView fx:id="activeListView" disable="false" prefHeight="200.0" prefWidth="200.0" />
+            <HBox fx:id="selectorBox" spacing="10.0">
+               <children>
+                  <VBox fx:id="selectorInputBox" spacing="20.0">
+                     <children>
+                        <TextField fx:id="selectorField" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="25.0" prefWidth="75.0" promptText="Send to:" />
+                        <Button fx:id="selectorButton" mnemonicParsing="false" onAction="#specificClientChooser" text="Select" />
+                        <Button fx:id="clear" mnemonicParsing="false" onAction="#clearSelectedClients" text="Clear" />
+                     </children>
+                  </VBox>
+                  <ListView fx:id="selectedClients" disable="false" prefHeight="175.0" prefWidth="100.0" />
+               </children>
+            </HBox>
+         </children>
+         <HBox.margin>
+            <Insets right="10.0" />
+         </HBox.margin>
+      </VBox>
+   </children>
+   <padding>
+      <Insets top="10.0" />
+   </padding>
+</HBox>
